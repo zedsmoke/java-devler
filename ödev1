@@ -1,0 +1,24 @@
+
+public class Main {
+    public static void main(String[] args) {
+        int mat, fiz, kim, tur, tar, muz, dersSayisi=6;
+        double ortalama = 0;
+        Scanner scan= new Scanner(System.in);
+        System.out.println("Matematik Ders Notunuzu Yazınız ");
+        mat= scan.nextInt();
+        System.out.println("Fizik Ders Notunuzu Yazınız ");
+        fiz= scan.nextInt();
+        System.out.println("Kimya Ders Notunuzu Yazınız ");
+        kim= scan.nextInt();
+        System.out.println("Türkçe Ders Notunuzu Yazınız ");
+        tur= scan.nextInt();
+        System.out.println("Tarih Ders Notunuzu Yazınız ");
+        tar= scan.nextInt();
+        System.out.println("Müzik Ders Notunuzu Yazınız ");
+        muz= scan.nextInt();
+        ortalama=(mat+fiz+kim+tur+tar+muz)/dersSayisi;
+        System.out.println("Not Ortalamanız= "+ortalama);
+        boolean sart= ortalama>=60;
+        String sonuc=sart?"Geçti":"Kaldi";
+        System.out.println(sonuc);
+    }
