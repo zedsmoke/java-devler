@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+       float vki, boy, kilo;
+       Scanner input =new Scanner(System.in);
+        System.out.print("Lütfen boyunuzu(metre cinsinden) giriniz :");
+        boy=input.nextFloat();
+        System.out.print("Lütfen kilonuzu giriniz :");
+        kilo=input.nextFloat();
+        vki=kilo/(boy*boy);
+        System.out.println("Vücut kitle indeksiniz :"+ vki);
+    }
+
+}
