@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int armut_k,elma_k, domates_k,muz_k,patlican_k;
+        double armut_f=2.14,elma_f=3.67,domates_f=1.11,muz_f=0.95,patlican_f=5.00,tutar;
+        Scanner input =new Scanner(System.in);
+        System.out.print("Armut Kaç Kilo ?");
+        armut_k=input.nextInt();
+        System.out.print("Elma Kaç Kilo ?");
+        elma_k=input.nextInt();
+        System.out.print("Domates Kaç Kilo ?");
+        domates_k=input.nextInt();
+        System.out.print("Muz Kaç Kilo ?");
+        muz_k=input.nextInt();
+        System.out.print("Patlican Kaç Kilo ?");
+        patlican_k=input.nextInt();
+        tutar=armut_k*armut_f+elma_f*elma_k+muz_f*muz_k+domates_f*domates_k+patlican_f*patlican_k;
+        System.out.println("Toplam Tutar"+tutar);
+    }
+
+}
