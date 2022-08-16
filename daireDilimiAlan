@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+       double pi=3.14,r,alan,cevre, aci, dilimAlani;
+        System.out.println("dairenin yarıçapını giriniz :");
+        Scanner input=new Scanner(System.in);
+        r= input.nextDouble();
+        cevre=2*pi*r;
+        alan=pi*r*r;
+        System.out.println("çevre: "+cevre);
+        System.out.println("alan: "+alan);
+        System.out.println("merkez açı ölçüsü giriniz");
+        aci=input.nextDouble();
+        dilimAlani=pi*r*r*aci/360;
+        System.out.println("merkez açı ölçüsü verilen daire diliminin alanı"+dilimAlani);
+    }
+
+}
