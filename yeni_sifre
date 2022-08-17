@@ -1,0 +1,49 @@
+package Giris;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        String userName, password,passNew;
+        Scanner inp = new Scanner(System.in);
+        System.out.print("Kullanıcı Adınız :");
+        userName = inp.nextLine();
+        System.out.print("Şifreniz :");
+        password = inp.nextLine();
+        if (userName.equals("patika")) {
+            if (password.equals("java123")) {
+                System.out.print("giriş başarılı");
+            } else {
+                System.out.println("girilen şifre yanlış");
+                System.out.println("şifre sıfırlamak isterminiz\n sıfırlamak isterseniz eski sifreden farklı sifre olusturmak zorundasınız");
+                System.out.println("1-evet\n2-Hayir");
+                int select = inp.nextInt();
+                switch (select) {
+                    case 1:
+                        System.out.println("yeni bir şifre giriniz :");
+                        passNew=inp.nextLine();
+
+                        if (passNew.equals(password)) {
+                            System.out.println("şifre oluşturulamadı");
+                        } else {
+                            System.out.println("şifre oluşturuldu");
+                            System.out.println(passNew);
+                        }
+                        break;
+
+
+
+
+
+
+                    case 2:
+                        System.out.println("sifrenizi dogrulamadan giremezsiniz");
+                        break;
+                    default:
+                        System.out.println("seçiminizi gözden geçirin");
+                }
+            }
+        }
+
+    }
+}
