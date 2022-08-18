@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        for (int i=99;i>1;i--){
+            boolean asal=true;
+            for (int k=2;k<i;k++){
+                if (i%k==0){
+                    asal=false;
+                }
+            }
+           if (asal){
+               System.out.print(i+" ");
+           }
+        }
+    }
+}
