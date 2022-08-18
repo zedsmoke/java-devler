@@ -1,0 +1,59 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        String userName, password, nesPassword;
+        int right = 3, balance = 15000,price, select;
+        while (right>0) {
+            Scanner input = new Scanner(System.in);
+            System.out.print("Adiniz :");
+            userName = input.nextLine();
+            System.out.print("Sifreniz :");
+            password = input.nextLine();
+            if (userName.equals("mehmet") && password.equals("1453")) {
+                System.out.println("Analiz Banka hoşgeldiniz!");
+                do {
+                    System.out.println("lütfen yapmak istediğiniz işlemi seçiniz");
+                    System.out.println( "1-Para yatırma\n" +
+                                        "2-Para çekme\n" +
+                                        "3-Bakiye sorgulama\n" +
+                                        "4-Cıkıs");
+                    select = input.nextInt();
+                    if (select == 1) {
+                        System.out.println("lutfen yatirmak istediginiz miktari giriniz: ");
+                        price = input.nextInt();
+                        if (price > 0) {
+                            balance += price;
+                            System.out.println("Toplam bakiyeniz : " + balance);
+                        }
+
+                    } else if (select == 2) {
+                        System.out.println("Lutfen cekmek istediğiniz miktarı giriniz: ");
+                        price = input.nextInt();
+                        if (price > balance) {
+                            System.out.println("Bakiye yetersiz");
+                        } else {
+                            balance -= price;
+                            System.out.println("Mevcut bakiye: " + balance);
+                        }
+
+                    } else if (select == 3) {
+                        System.out.println("mevcut bakiye : " + balance);
+
+                    }
+                } while (select != 4);
+                {
+                    System.out.println("bizi tercih ettiginiz için tesekurler");
+
+                }break;
+            }else {
+                right--;
+                if(right>0) {
+                    System.out.println("Hatali Kullanici adı veya sifre. Tekrar deneyiniz\nKalan hakkiniz : " + right);
+                }else{
+                    System.out.println("hesabiniz bloke oldu en yakin subeye basvurunuz");
+                }
+            }
+        }
+    }
+}
