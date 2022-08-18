@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int sayi,toplam=0;
+        Scanner input=new Scanner(System.in);
+        System.out.println("mukemmel sayi programina hosgeldiniz\n Lutfen tam sayi giriniz");
+        sayi=input.nextInt();
+        for (int i=1;i<sayi;i++){
+            if (sayi%i==0){
+                toplam+=i;
+                System.out.println("tam bolenleri :"+i);
+            }
+        }
+        System.out.println("tam bolenlerinin toplami"+toplam);
+        if (toplam==sayi){
+            System.out.println("girilen "+sayi+" sayisi mukemmel sayidir ");
+        }else {
+            System.out.println("degildir");
+        }
+    }
+}
