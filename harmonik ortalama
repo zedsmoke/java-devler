@@ -1,0 +1,36 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+
+public class Main {
+    public static void main(String[] args) {
+        double toplam=0;
+        double harOrtalama;
+        double harSeri;
+        int elemanSayisi;
+        double[] dizi;
+        System.out.print("Harmonik ortalama programına hoşgeldiniz" +
+                           "\n========================================"+
+                           "\nLütfen eleman sayisini giriniz : ");
+        Scanner input=new Scanner(System.in);
+        elemanSayisi=input.nextInt();
+        dizi=new double[elemanSayisi];
+
+        for(int k=0;k< dizi.length;k++){
+            System.out.print((k+1)+". Elemanı giriniz : ");
+            dizi[k]=input.nextInt();
+        }
+        System.out.println("Oluşan dizi ===>>>"+Arrays.toString(dizi));
+        for (double x:dizi){
+            harSeri=1/x;
+            toplam+=harSeri;
+
+        }
+        harOrtalama= dizi.length/toplam;
+        System.out.println("harmonik ortalamaları : "+harOrtalama);
+
+
+
+
+    }
+}
